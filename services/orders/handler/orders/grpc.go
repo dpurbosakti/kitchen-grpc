@@ -40,3 +40,16 @@ func (h *OrdersGRPCHandler) CreateOrder(ctx context.Context, req *orders.CreateO
 
 	return res, nil
 }
+
+func (h *OrdersGRPCHandler) GetOrders(ctx context.Context, req *orders.GetOrdersRequest) (*orders.GetOrdersResponse, error) {
+	o, err := h.orderService.GetOrders(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	res := &orders.GetOrdersResponse{
+		Orders: o,
+	}
+
+	return res, nil
+}

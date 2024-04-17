@@ -12,7 +12,7 @@ type httpServer struct {
 	addr string
 }
 
-func NewHTTPServer(addr string) *httpServer {
+func newHTTPOrderServer(addr string) *httpServer {
 	return &httpServer{
 		addr: addr,
 	}
