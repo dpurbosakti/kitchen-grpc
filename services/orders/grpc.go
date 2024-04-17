@@ -14,7 +14,7 @@ type gRPCServer struct {
 	addr string
 }
 
-func NewGRPCServer(addr string) *gRPCServer {
+func newGRPCOrderServer(addr string) *gRPCServer {
 	return &gRPCServer{
 		addr: addr,
 	}

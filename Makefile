@@ -4,8 +4,8 @@ run-orders:
 run-kitchen:
 	@go run services/kitchen/*.go
 
-## gen-order: generate go code from proto
-gen-order:
+## gen-orders: generate go code from proto
+gen-orders:
 	rm -f services/common/genproto/orders/*.go
 	@protoc \
 	--proto_path=protobuf \
